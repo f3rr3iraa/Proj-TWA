@@ -1,0 +1,553 @@
+
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  overflow: hidden; 
+  background: #f0f0f0;
+}
+
+
+#content-login {
+  min-height: 100vh;
+  background: url("../images/background.svg") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Input index */
+.input-container {
+  position: relative;
+  margin: 30px auto;
+  width: 100%;
+  max-width: 350px;
+}
+
+.input-container input[type="text"],
+.input-container input[type="password"] {
+  font-size: 18px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #9a9a9a;
+  padding: 5px 0;
+  background-color: transparent !important;
+  outline: none;
+  color: #f0f0f0;
+}
+
+
+/* Garante que no modo texto aparece texto normal */
+.input-container input[type="text"] {
+  -webkit-text-security: none;
+  text-security: none;
+}
+
+/* Garante que o password aparece como bolinhas */
+.input-container input[type="password"] {
+  -webkit-text-security: disc;
+  text-security: disc;
+}
+
+.icon-password {
+    color: #9a9a9a; /* cor default */
+    transition: color .2s ease;
+}
+
+.icon-password.active {
+    color: #f0f0f0; /* quando está ativo */
+}
+
+
+.input-container .label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #9a9a9a;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.input-container input:focus~.label,
+.input-container input:valid~.label {
+  top: -20px;
+  font-size: 14px;
+  color: #f0f0f0;
+}
+
+.input-container .underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #f0f0f0;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.input-container input:focus~.underline,
+.input-container input:valid~.underline {
+  transform: scaleX(1);
+}
+
+.btn-entrar {
+  background-color: #f0f0f0;
+  border: none;
+  color: #000;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+}
+
+@media (max-width: 1868px) {
+    .btn-entrar {
+        width: 50% !important;
+    }
+}
+
+/* Hover: um pouco mais escuro */
+.btn-entrar:hover {
+  background-color: #e0e0e0; /* ajustado para ficar mais escuro que #f0f0f0 */
+}
+
+/* Active: ao clicar volta para o normal */
+.btn-entrar:active {
+  background-color: #f0f0f0;
+}
+
+/* Para inputs preenchidos automaticamente pelo navegador */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #22333b inset !important; /* ou a cor real do input */
+  -webkit-text-fill-color: #f0f0f0 !important; /* cor do texto */
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+
+
+/* Esconder o login até o JS terminar de verificar o token */
+#content-login.preload-hidden {
+    display: none !important;
+}
+
+/* sidebar */
+
+
+.sidebar-content {
+  min-width: 230px;
+  max-width: 230px;
+  background-color: #22333B !important;
+  color: #fff;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+#content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+
+.sidebar-content .nav-link {
+  color: #fff;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  display: block;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.sidebar-content .nav-link.active {
+  background-color: #f8f9fa;
+  color: #000000 !important;
+  font-weight: bold;
+}
+
+.sidebar-content .nav-link:not(.active):hover {
+  font-weight: bold;
+}
+
+
+.btn-close:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+body {
+  min-height: 100vh;
+  display: flex;
+  background: #f8f9fa;
+  overflow-x: hidden;
+}
+
+
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+
+
+.icon-logo {
+  max-width: 200px;
+}
+
+
+.table-color {
+  background-color: #22333B !important;
+  color: #fff;
+  border-color: #373b3e;
+}
+
+
+.title-color {
+  color: #22333B !important;
+}
+
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* usa altura do pai, evita exceder 100vh */
+  box-sizing: border-box; /* inclui padding na altura */
+}
+
+#itemForm {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.form-actions {
+  margin-top: auto; /* empurra para baixo */
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2vh;
+  margin-bottom: 2vh;
+}
+
+
+
+.pedidos-section,
+.produtos-section {
+  flex: 0 0 50%;
+  overflow-y: auto;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 8px;
+}
+
+.pagination button {
+  background-color: #22333B;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 0px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+
+.pagination button:hover:not(:disabled) {
+  background-color: #2e4752;
+  color: white;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #22333b98;
+}
+
+
+
+
+  
+
+.offcanvas {
+  background-color: #f8f9fa;
+}
+
+
+
+
+
+
+/* ====== ESTILO BASE DO CONTAINER ====== */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+}
+
+
+legend {
+  font-weight: bold;
+}
+
+
+
+
+/* ====== ESTILO COOLINPUT ====== */
+/* From Uiverse.io by kamehame-ha */
+.coolinput {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 15px;
+}
+
+.coolinput label.text {
+  font-size: 0.8rem;
+  color: #2e4752;
+  font-weight: 700;
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  background: #f8f9fa;
+  width: fit-content;
+}
+
+.coolinput .input {
+  padding: 10px;
+  font-size: 0.85rem;
+  border: 2px #2e4752 solid;
+  background: #f8f9fa;
+  border-radius: 0px !important;
+  outline: none;
+  resize: vertical;
+}
+
+.coolinput .input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #2e4752 !important;
+}
+
+.coolinput input.input {
+  padding: 10px;
+  font-size: 0.85rem;
+  border: 2px #2e4752 solid;
+  background: #f8f9fa;
+  border-radius: 0px !important;
+  outline: none;
+  resize: vertical;
+}
+
+.coolinput select.input {
+  padding: 10px;
+  font-size: 0.85rem;
+  border: 2px #2e4752 solid;
+  background: #f8f9fa;
+  border-radius: 0px !important;
+  outline: none;
+  appearance: auto; 
+}
+
+
+/* ====== BOTÃO ====== */
+.btn-form {
+  display: block;
+  margin: 20px  0 auto;
+  padding: 10px 25px;
+  border: none;
+  background-color: #22333B;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-form:hover {
+  background-color: #2e4752;
+}
+
+
+select.input option[disabled][selected] {
+  color: #22333B; 
+}
+
+
+select.input:invalid {
+  color: #22333B;
+}
+
+select.input option {
+  color: #000; 
+}
+
+
+#filtrosContainer .coolinput {
+  width: 100%;
+  margin-top: 0; /
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.table td {
+  max-width: 200px;      
+  white-space: normal;     
+  word-wrap: break-word;   
+  overflow-wrap: anywhere;
+  vertical-align: middle;  
+}
+
+td img {
+  max-width: 100px;        
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+
+
+#modalImg .modal-content {
+  background-color: transparent !important;
+  border: none;
+}
+
+#modalImgView {
+  display: block;
+  margin: 0 auto;
+  width: 50vw;         /* 50% da largura da viewport (não do modal) */
+  height: auto;        /* mantém proporções */
+  max-height: 90vh;    /* não ultrapassa a altura da janela */
+  object-fit: contain; /* garante que não corta */
+  background-color: transparent;
+}
+
+
+#modalImg .btn-close:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#modalImg .modal-header {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+  
+/* tirar borda*/
+.form-select:hover {
+  background-color: #e9ecef;
+}
+.form-select:focus {
+  box-shadow: none;
+  border-color: inherit;
+}
+
+
+
+/* Por padrão, escondemos a mensagem */
+.unsupported {
+    display: none;
+}
+/* Apenas para mobile (≤ 767px) */
+@media (max-width: 767px) {
+    /* Esconder conteúdo principal */
+    #content-login,
+    #content-dashboard,
+    #content {
+        display: none !important;
+    }
+
+    /* Fundo da tela */
+    .content-error {
+        position: fixed;      /* ocupa toda a tela */
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: url("../images/background_mobile.svg") no-repeat center center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9998;       /* atrás do retângulo */
+    }
+
+    /* Retângulo da mensagem */
+    .unsupported {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        max-width: 500px;
+        padding: 20px 10px;
+        background: #f8d7da; /* fundo semi-transparente */
+        border: 1px solid #f1a8af;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        z-index: 9999;       /* acima do fundo */
+    }
+
+    .unsupported h4 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #721c24;
+        text-align: center;
+    }
+
+    .unsupported p {
+        font-size: 1rem;
+        text-align: center;
+        color: #721c24;
+        line-height: 1.4;
+    }
+}
+
+
+/* fade suave da tabela */
+.table-fade {
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.table-show {
+    opacity: 1;
+}
+
+/* destaque subtil de linhas atualizadas */
+.row-updated {
+    animation: rowFlash 1.2s ease;
+}
+
+@keyframes rowFlash {
+    0%   { background-color: rgba(25, 135, 84, 0.25); }
+    100% { background-color: transparent; }
+}

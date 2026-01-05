@@ -1,0 +1,288 @@
+body {
+  background-color: #f8f9fa;
+}
+.container-navbar {
+    background-color: #22333B;
+}
+
+.img-navbar {
+    height: 60px;
+}
+
+
+.btn-reserve {
+  color: #ffffff;
+  background-color: #22333B;
+  border-color: #22333B;
+}
+
+.btn-reserve:hover {
+  color: #ffffff;              
+  background-color: #2e4752;   
+  border-color: #2e4752;     
+}
+
+
+
+
+
+.bg-modal {
+  background-color: #f8f9fa;
+}
+
+.table-color {
+  background-color: #22333B !important;
+  color: #fff;
+  border-color: #373b3e;
+}
+
+
+#contactosNavbar {
+  display: none;
+}
+
+
+
+#modalImg .modal-content {
+  background-color: transparent !important;
+  border: none;
+}
+
+#modalImgView {
+  display: block;
+  margin: 0 auto;
+  width: 50vw;         /* 50% da largura da viewport (não do modal) */
+  height: auto;        /* mantém proporções */
+  max-height: 90vh;    /* não ultrapassa a altura da janela */
+  object-fit: contain; /* garante que não corta */
+  background-color: transparent;
+}
+
+
+#modalImg .btn-close:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#modalImg .modal-header {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+  
+
+
+
+/* tirar borda*/
+.form-select:hover {
+  background-color: #e9ecef;
+}
+.form-select:focus {
+  box-shadow: none;
+  border-color: inherit;
+}
+
+.no-outline:focus {
+  box-shadow: none;
+  border-color: inherit;
+}
+
+
+
+ 
+
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pagination button {
+  background-color: #22333B;
+  color: white;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  transition: 0.2s;
+  
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #2e4752;
+  color: white;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #22333b98;
+}
+
+
+
+/* Ajuste para imagem e info do produto */
+#reserveProductInfo img {
+  max-height: 400px;
+  width: auto;
+  margin: 0 auto;
+}
+
+
+
+
+
+.table td {
+  max-width: 200px;      
+  white-space: normal;     
+  word-wrap: break-word;   
+  overflow-wrap: anywhere;
+  vertical-align: middle;  
+}
+
+td img {
+  max-width: 100px;        
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+#filtrosContainer .coolinput {
+  width: 100%;
+  margin-top: 0; /* Remove espaço que estava a empurrar o conteúdo para baixo */
+}
+
+.coolinput {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 15px;
+}
+
+.coolinput label.text {
+  font-size: 0.8rem;
+  color: #2e4752;
+  font-weight: 700;
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  background: #f8f9fa;
+  width: fit-content;
+}
+
+.coolinput .input {
+  padding: 10px;
+  font-size: 0.85rem;
+  border: 2px #2e4752 solid;
+  background: #f8f9fa;
+  outline: none;
+  resize: vertical;
+}
+
+.coolinput .input:focus {
+  border-color: #2e4752;
+}
+
+/* ====== BOTÃO ====== */
+.btn-form {
+  display: block;
+  margin: 20px  0 auto;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  background-color: #22333B;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-form:hover {
+  background-color: #2e4752;
+}
+
+@supports (-webkit-touch-callout: none) {
+
+  /* CSS só para iPhone / iPad / Safari iOS */
+
+  select,
+  input {
+    -webkit-appearance: none !important;
+    border-radius: 6px !important;
+    background-color: #f8f9fa !important;
+    border: 2px solid #2e4752 !important;
+    padding: 10px !important;
+    font-size: 16px !important; /* evita zoom automático no iPhone */
+  }
+
+  /* Se quiseres personalizar ainda os dropdowns */
+  select {
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%2322333B' height='16' viewBox='0 0 16 16' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M4 6l4 4 4-4z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+  }
+
+select.input {
+    color: #000 !important;
+  }
+
+}
+
+.btn-reversar {
+    white-space: nowrap;   /* impede cortar ou quebrar */
+    padding: 5px 12px;     /* opcional: mais espaço */
+}
+
+
+
+/* ===== Estilo específico para iOS Safari (iPhone/iPad) ===== */
+@supports (-webkit-touch-callout: none) {
+
+  /* Geral para selects e inputs */
+  select.input,
+  input.input,
+  select,
+  input {
+    -webkit-appearance: none !important;  /* remove aparência nativa */
+    -moz-appearance: none !important;
+    appearance: none !important;
+    border-radius: 6px !important;
+    background-color: #f8f9fa !important;
+    border: 2px solid #2e4752 !important;
+    padding: 10px 35px 10px 10px !important; /* espaço para a seta à direita */
+    font-size: 16px !important; /* evita zoom automático */
+    color: #000 !important;
+    box-sizing: border-box !important; /* garante alinhamento */
+  }
+
+  /* Só para selects: seta personalizada */
+  select.input,
+  select {
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%2322333B' height='16' viewBox='0 0 16 16' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M4 6l4 4 4-4z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+  }
+
+  /* Remove outline e sombra ao focar */
+  select.input:focus,
+  input.input:focus,
+  select:focus,
+  input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: #2e4752 !important;
+  }
+}
+
