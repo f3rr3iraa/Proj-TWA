@@ -36,7 +36,7 @@ module.exports = async (req, res) => {
       html: `
         <div style="font-family: Arial, sans-serif; color: #333; max-width: 900px; margin: auto; border: 1px solid #e0e0e0; border-radius: 10px; overflow: hidden;">
           <div style="background-color: #F0F0F0; padding: 10px; text-align: center;">
-            <img src="https://jsousaecoelho.com/image/global/logo_footer.png" alt="Logo da Empresa" style="max-height: 120px;">
+            <img src="https://jipdtttjsmyllnaqggwy.supabase.co/storage/v1/object/public/imagens/logo_dark.webp" alt="Logo da Empresa" style="max-height: 120px;">
           </div>
           <table role="presentation" style="width: 100%; border-collapse: collapse; padding: 20px;">
             <tr>
@@ -62,7 +62,7 @@ module.exports = async (req, res) => {
             </tr>
           </table>
           <div style="background-color: #F0F0F0; padding: 15px; text-align: center; font-size: 12px; color: #777;">
-            &copy; ${new Date().getFullYear()} Chapas e Sobras | J. Sousa & Coelho, Lda.
+            &copy; ${new Date().getFullYear()} Chapas e Sobras | Marmore Real, Lda.
           </div>
         </div>
       `,

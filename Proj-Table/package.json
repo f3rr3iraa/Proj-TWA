@@ -1,5 +1,5 @@
 {
-  "name": "proj-data-jsousaecoelho",
+  "name": "proj-twa",
   "version": "1.0.0",
   "description": "��#\u0000 \u0000d\u0000a\u0000t\u0000a\u0000_\u0000j\u0000-\u0000s\u0000o\u0000u\u0000s\u0000a\u0000-\u0000c\u0000o\u0000e\u0000l\u0000h\u0000o\u0000\r\u0000 \u0000",
   "main": "index.js",
@@ -86,10 +86,10 @@
   "type": "commonjs",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/f3rr3iraa/data_j-sousa-coelho.git"
+    "url": "git+https://github.com/f3rr3iraa/proj-twa.git"
   },
   "bugs": {
-    "url": "https://github.com/f3rr3iraa/data_j-sousa-coelho/issues"
+    "url": "https://github.com/f3rr3iraa/proj-twa/issues"
   },
-  "homepage": "https://github.com/f3rr3iraa/data_j-sousa-coelho#readme"
+  "homepage": "https://github.com/f3rr3iraa/proj-twa#readme"
 }

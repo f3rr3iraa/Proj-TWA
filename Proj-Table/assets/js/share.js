@@ -50,7 +50,7 @@ copyBtn.addEventListener("click", async () => {
   if (isMobile() && navigator.share) {
     try {
       await navigator.share({
-        title: "Chapas e Sobras | J. Sousa & Coelho, Lda",
+        title: "Chapas e Sobras | Marmore Real, Lda",
         text: message,
       });
       return;
